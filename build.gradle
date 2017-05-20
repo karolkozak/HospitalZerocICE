@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+version = '0.0.1-SNAPSHOT'
+group = 'com.hospital'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.zeroc/ice
+    compile group: 'com.zeroc', name: 'ice', version: '3.6.3'
+}
